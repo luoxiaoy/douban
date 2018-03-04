@@ -6,6 +6,9 @@ import retrofit2.http.GET;
 
 /**
  * Created by ly on 2018/2/11.
+ *
+ *
+ * https://developers.douban.com/wiki/?title=api_v2
  */
 
 public interface DoubanApi {
