@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/container"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/banner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#a91"
+        android:gravity="center"
+        android:text="banner"
+        app:layout_constraintDimensionRatio="H,16:6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#463"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner" />
+
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="5dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="随着人工智能在智能城市、新零售等领域的不断落地，云的意义已经不仅仅是为AI提供强大计算能力，而是逐渐延展成为一个承载各项人工智能技能的计算平台，也成为了AI时代的兵家必争之地。"
+        android:textColor="#294"
+        app:layout_constraintLeft_toRightOf="@+id/tv1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8分钟前"
+        app:layout_constraintBottom_toBottomOf="@+id/tv1"
+        app:layout_constraintLeft_toLeftOf="@+id/tv2" />
+
+    <TextView
+        android:id="@+id/tb1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#b41"
+        android:gravity="center"
+        android:text="tab1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tb2" />
+
+    <TextView
+        android:id="@+id/tb2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#b61"
+        android:gravity="center"
+        android:text="tab2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/tb1"
+        app:layout_constraintRight_toLeftOf="@+id/tb3" />
+
+    <TextView
+        android:id="@+id/tb3"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#b81"
+        android:gravity="center"
+        android:text="tab3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/tb2"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#612"
+        app:layout_constraintLeft_toRightOf="@id/guideline_w"
+        app:layout_constraintTop_toBottomOf="@id/guideline_h" />
+
+</android.support.constraint.ConstraintLayout>
