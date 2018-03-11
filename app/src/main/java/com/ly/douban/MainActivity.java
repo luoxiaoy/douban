@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.ly.douban.business.DoubanApi;
+import com.ly.douban.business.TheatersBean;
 import com.ly.douban.support.logger.Logger;
 import com.ly.douban.support.utils.RetrofitUtils;
 
@@ -74,16 +75,16 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void build() {
-        sendRequset(new Function<String, ObservableSource<String>>() {
+        sendRequset(new Function<String, ObservableSource<TheatersBean>>() {
             @Override
-            public ObservableSource<String> apply(String s) throws Exception {
+            public ObservableSource<TheatersBean> apply(String s) throws Exception {
                 DoubanApi doubanApi = RetrofitUtils.getRetrofit().create(DoubanApi.class);
-                return doubanApi.getTheaters();
+                return doubanApi.getTheaters(0,20);
             }
-        }, new Consumer<String>() {
+        }, new Consumer<TheatersBean>() {
             @Override
-            public void accept(String s) throws Exception {
-                Logger.e(s);
+            public void accept(TheatersBean s) throws Exception {
+                Logger.e(s.getTitle());
             }
         });
 
